@@ -132,7 +132,7 @@ class Ks_Shortcode{
 		<li><span class="name">tag__not_in</span><span>除外ターム</span></li>
 		<li><span class="name">orderby</span><span>ソートする要素名</span></li>
 		<li><span class="name">order</span><span>昇降順の指定 昇順:ASC 降順:DESC デフォルトはDESC</span></li>
-		<li><span class="name">template</span><span>テーマの「template-parts」フォルダ内にあるlist-●●●●.phpを投稿データのテンプレートとして表示</span></li>
+		<li><span class="name">template</span><span>指定がない場合は、テーマの「template-parts」フォルダ内にあるlist-[カスタム投稿タイプ].phpもしくはlist.phpを投稿データのテンプレートとして表示</span></li>
 		<li><span class="name">tag</span><span>一覧を囲むタグ デフォルトはdiv</span></li>
 		<li><span class="name">add_class</span><span>一覧を囲むタグに追加するclass</span></li>
 		<li><span class="name">navi</span><span>1より大きい整数値を指定するとページネーションを一覧下に追加</span></li>
@@ -672,4 +672,5 @@ add_filter('widget_text', function($content) {
 });
 add_action( 'widgets_init', function() {
   remove_filter( 'widget_text_content', 'wpautop' );	
+
 }, 1 );
